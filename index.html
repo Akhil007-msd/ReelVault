@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b16">
+  <title>ReelVault | Video Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="#">◈ ReelVault<span>.</span></a>
+    <span class="nav-tag">AKHIL.CODEX07</span>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="pill">✦ SIMPLE · FAST · MODERN</div>
+      <h1>Your videos.<br><span>Your collection.</span></h1>
+      <p class="subtitle">
+        A beautiful workspace for Instagram Reels and YouTube videos.
+        Paste a link to get started.
+      </p>
+
+      <div class="downloader">
+        <div class="platforms">
+          <button class="platform active" data-platform="instagram">
+            ◎ Instagram
+          </button>
+          <button class="platform" data-platform="youtube">
+            ▶ YouTube
+          </button>
+        </div>
+
+        <label for="videoUrl">VIDEO LINK</label>
+        <div class="url-box">
+          <span>↗</span>
+          <input id="videoUrl" type="url"
+            placeholder="Paste your video URL here..."
+            autocomplete="url">
+          <button id="clearBtn" title="Clear URL">✕</button>
+        </div>
+
+        <button id="submitBtn" class="primary">
+          <span id="btnText">Check video link ↗</span>
+        </button>
+
+        <p id="message" role="status" aria-live="polite">
+          Use a public link to content you own or are authorized to download.
+        </p>
+
+        <div id="result" class="result" hidden>
+          <div class="result-icon">✓</div>
+          <div>
+            <strong id="resultTitle">Link recognized</strong>
+            <p id="resultText"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="features">
+        <article>
+          <div class="feature-icon">↗</div>
+          <h3>Addicted to Download</h3>
+          <p>Paste a link and check the platform.</p>
+        </article>
+        <article>
+          <div class="feature-icon">◇</div>
+          <h3>Clean & Secure</h3>
+          <p>A distraction-free media workspace.</p>
+        </article>
+        <article>
+          <div class="feature-icon">⌘</div>
+          <h3>Two platforms</h3>
+          <p>Instagram and YouTube link recognition.</p>
+        </article>
+      </div>
+
+      <footer>
+        <p>REELVAULT © 2026 · Built for Editors</p>
+        <p>Respect Editors' rights and platform rules.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
