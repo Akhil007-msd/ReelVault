@@ -4,86 +4,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090b16">
-  <title>ReelVault | Video Downloader</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#09090f">
+  <meta name="description" content="ReelVault — a modern video link checker for Instagram and YouTube.">
+  <title>ReelVault — Video Link Checker</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
-    <a class="brand" href="#">◈ ReelVault<span>.</span></a>
-    <span class="nav-tag">AKHIL.CODEX07</span>
-  </nav>
+  <header class="navbar">
+    <a class="brand" href="./" aria-label="ReelVault home">
+      <span class="brand-icon">R</span>
+      <span>Reel<span class="accent">Vault</span></span>
+    </a>
+    <span class="nav-label">CREATOR TOOLKIT</span>
+  </header>
 
-  <main>
-    <section class="hero">
-      <div class="pill">✦ SIMPLE · FAST · MODERN</div>
-      <h1>Your videos.<br><span>Your collection.</span></h1>
-      <p class="subtitle">
-        A beautiful workspace for Instagram Reels and YouTube videos.
-        Paste a link to get started.
-      </p>
+  <main class="container">
+    <div class="pill"><span class="live-dot"></span> YOUR CREATOR SPACE</div>
 
-      <div class="downloader">
-        <div class="platforms">
-          <button class="platform active" data-platform="instagram">
-            ◎ Instagram
-          </button>
-          <button class="platform" data-platform="youtube">
-            ▶ YouTube
-          </button>
-        </div>
+    <h1>Your videos.<br><span class="gradient-text">Saved beautifully.</span></h1>
 
-        <label for="videoUrl">VIDEO LINK</label>
-        <div class="url-box">
-          <span>↗</span>
-          <input id="videoUrl" type="url"
-            placeholder="Paste your video URL here..."
-            autocomplete="url">
-          <button id="clearBtn" title="Clear URL">✕</button>
-        </div>
+    <p class="subtitle">
+      Check video links in seconds with a clean, simple experience.
+    </p>
 
-        <button id="submitBtn" class="primary">
-          <span id="btnText">Check video link ↗</span>
+    <section class="checker">
+      <label for="videoUrl">VIDEO LINK</label>
+
+      <div class="input-row">
+        <input
+          id="videoUrl"
+          type="url"
+          placeholder="Paste an Instagram or YouTube URL..."
+          autocomplete="url"
+          spellcheck="false"
+        >
+        <button id="checkBtn" class="primary-btn" type="button">
+          Check link <span aria-hidden="true">→</span>
         </button>
+      </div>
 
-        <p id="message" role="status" aria-live="polite">
-          Use a public link to content you own or are authorized to download.
-        </p>
+      <div class="utility-row">
+        <button id="pasteBtn" class="text-btn" type="button">↳ Paste link</button>
+        <button id="clearBtn" class="text-btn" type="button">Clear</button>
+      </div>
 
-        <div id="result" class="result" hidden>
-          <div class="result-icon">✓</div>
-          <div>
-            <strong id="resultTitle">Link recognized</strong>
-            <p id="resultText"></p>
-          </div>
+      <div id="status" class="status" role="status" aria-live="polite">
+        Paste a link above to get started.
+      </div>
+
+      <div id="result" class="result hidden">
+        <div class="result-icon" id="resultIcon">✓</div>
+        <div class="result-copy">
+          <strong id="resultTitle">Link checked</strong>
+          <p id="resultText"></p>
         </div>
+        <button id="openBtn" class="secondary-btn" type="button">
+          Open link ↗
+        </button>
       </div>
+    </section>
 
-      <div class="features">
-        <article>
-          <div class="feature-icon">↗</div>
-          <h3>Addicted to Download</h3>
-          <p>Paste a link and check the platform.</p>
-        </article>
-        <article>
-          <div class="feature-icon">◇</div>
-          <h3>Clean & Secure</h3>
-          <p>A distraction-free media workspace.</p>
-        </article>
-        <article>
-          <div class="feature-icon">⌘</div>
-          <h3>Two platforms</h3>
-          <p>Instagram and YouTube link recognition.</p>
-        </article>
-      </div>
+    <section class="platforms">
+      <article class="platform-card">
+        <div class="platform-icon instagram">◎</div>
+        <div>
+          <h2>Instagram</h2>
+          <p>Reels and supported video links</p>
+        </div>
+        <span class="arrow">↗</span>
+      </article>
 
-      <footer>
-        <p>REELVAULT © 2026 · Built for Editors</p>
-        <p>Respect Editors' rights and platform rules.</p>
-      </footer>
+      <article class="platform-card">
+        <div class="platform-icon youtube">▶</div>
+        <div>
+          <h2>YouTube</h2>
+          <p>Videos and Shorts links</p>
+        </div>
+        <span class="arrow">↗</span>
+      </article>
+    </section>
+
+    <section class="note">
+      <span>✦</span>
+      <p>
+        ReelVault checks link formats; it does not download video files yet.
+        Only download content you own or have permission to save.
+      </p>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer>
+    <span>© 2026 ReelVault</span>
+    <span>Built for creators, with care.</span>
+  </footer>
 </body>
 </html>
